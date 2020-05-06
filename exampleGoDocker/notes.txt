@@ -1,0 +1,3 @@
+to create image use "docker build -t img-test-doc ."
+to run image for this example use "docker run -p 3030:81 -it --name test-app --rm  img-test-doc"
+to see result use the link "http://localhost:3030/hello"

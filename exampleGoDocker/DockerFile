@@ -1,0 +1,27 @@
+# Получение версии языка
+FROM golang:latest
+
+# Копирование файлов в рабочую директорию
+#WORKDIR /go
+#COPY . /app/MyApp
+#WORKDIR /app/MyApp
+#RUN go build .
+
+#
+ADD . /go/src/app
+#
+WORKDIR /go/src/app
+#
+RUN env GOOS=linux GOARCH=amd64 go build -o build/main
+#
+#ENV PORT=81
+
+# Expose the application on port 81
+EXPOSE 81
+
+
+#Вариант, когда сборку осуществляем в момент запуска контейнера
+#CMD ["go","run", "/go/src/app/main.go"]
+
+#Вариант, когда собираем заранее и делаем запуск только тогда, когда стартуем контейнер
+CMD ["/go/src/app/build/main"]
