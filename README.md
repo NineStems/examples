@@ -27,3 +27,5 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 //add golang
 
 https://github.com/golang/go/wiki/Ubuntu
+
+https://docs.mongodb.com/manual/reference/ - addition information about using mongodb
